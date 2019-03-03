@@ -1,0 +1,277 @@
+<!--
+ Copyright (c) 2014, 2019, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Incidents Content Area</h1>
+  
+  
+  <div class="oj-flex">
+      
+      <div class="oj-flex-item oj-panel oj-margin oj-panel-alt1">
+          
+           <oj-select-one id="basicSelect" value="{{val}}" style="max-width:20em">
+            <oj-option value="pie">pie</oj-option>
+            <oj-option value="bar">bar</oj-option>
+            
+  </oj-select-one>
+  
+  <oj-chart
+  type='[[val]]'
+  series='[[datasource]]'>
+  </oj-chart>
+  
+  <div id="demo-container">
+
+          <div id="avatar-container" class="demo-flex-display">
+            <div class="oj-flex">
+              <div class="oj-flex oj-sm-align-items-center oj-sm-margin-2x">
+                <div class="of-flex-item">
+                  <oj-avatar role="img" size="[[avatarSize]]" initials='[[initials]]'
+                    data-bind="attr:{'aria-label':'Avatar of ' + firstName + ' ' + lastName}">
+                  </oj-avatar>
+                </div>
+              </div>
+              <div class="oj-flex oj-sm-align-items-center oj-sm-margin-2x">
+                <div class="of-flex-item">
+                  <oj-avatar role="img" size="[[avatarSize]]" initials='[[initials]]'
+                    data-bind="attr:{'aria-label':'Avatar of ' + firstName + ' ' + lastName}"
+                    src="css/images/avatar_24px_2x.png">
+                  </oj-avatar>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+  <div id="componentDemoContent" style="width: 1px; min-width: 50%; margin-top: 15px">
+        
+        <oj-accordion id="accordionPage">
+          <oj-collapsible id="c1">
+            <span slot="header"><span><span class="demo-icon-font demo-education-icon-24"></span> Header 1</span></span>
+            <p>Content 1.</p>
+          </oj-collapsible>
+          <oj-collapsible id="c3" expanded>
+            <span slot="header">Header 3</span>
+            <div>
+              <oj-label id="mainlabelid">Colors</oj-label>
+              <oj-radioset id="radiosetBasicDemoId" value="red" labelled-by="mainlabelid">
+                <oj-option id="blueopt" value="blue">Blue</oj-option>
+                <oj-option id="greenopt" value="green">Green</oj-option>
+                <oj-option id="redopt" value="red">Red</oj-option>
+              </oj-radioset>
+            </div>
+          </oj-collapsible>
+          <oj-collapsible id="c4">
+            <span slot="header">Header 4</span>
+            <div>
+            <oj-accordion id="nestedAccordion">
+              <oj-collapsible id="ic1">
+                <span slot="header">Inner Header 1</span>
+                <p>I'm collapsible inside an inner accordion.</p>
+              </oj-collapsible>
+              <oj-collapsible id="ic2">
+                <span slot="header">Inner Header 2</span>
+                <p>Another collapsible inside an inner accordion.</p>
+              </oj-collapsible>
+            </oj-accordion>
+            </div>
+          </oj-collapsible>
+        </oj-accordion>
+
+        
+      </div>
+       
+  <div>
+   <tr>
+              <td>
+                <label> Rating:</label>
+              </td>
+              <td>
+                <oj-rating-gauge id="gauge2"
+                                 value="{{ratingValue2}}"
+                    style="width:120px;height:25px;margin-top:20px;">
+                                     
+                </oj-rating-gauge>
+              </td>
+        
+   </tr>
+  </div>
+          
+      </div>
+      
+      <div class="oj-flex-item oj-panel oj-margin oj-panel-alt1">
+          
+           <div id="componentLitView" style="width: 1px; min-width: 50%; margin-top: 20px">
+  
+             <oj-list-view id="listview" aria-label="list with static data" selection-mode="multiple" >
+            <ul>
+                <li id="amybartlet">
+                    <span class="avatar" style="background-image:url('images/img4.jpg') "></span>
+                    <div class="container">
+                        <div>
+                            <span class="name">Amy Bartlet</span>
+                        </div>
+                        <div>
+                            <span class="oj-text-xs oj-text-secondary-color">Vice President</span>
+                        </div>
+                    </div>
+                </li>
+                <li id="andyjones">
+                    <span class="avatar" style="background-image: url('images/avatar_24px_2x.png')"></span>
+                    <div class="container">
+                        <div>
+                            <span class="name">Andy Jones</span>
+                        </div>
+                        <div>
+                            <span class="oj-text-xs oj-text-secondary-color">Director</span>
+                        </div>
+                    </div>
+                </li>
+                <li id="andrewbugsy">
+                    <span class="avatar" style="background-image: url('images/dvt/11.png')"></span>
+                    <div class="container">
+                        <div>
+                            <span class="name">Andrew Bugsy</span>
+                        </div>
+                        <div>
+                            <span class="oj-text-xs oj-text-secondary-color">Individual Contributer</span>
+                        </div>
+                    </div>
+                </li>
+                <li id="annettbarnes">
+                    <span class="avatar" style="background-image: url('images/dvt/2.png')"></span>
+                    <div class="container">
+                        <div>
+                            <span class="name">Annett Barnes</span>
+                        </div>
+                        <div>
+                            <span class="oj-text-xs oj-text-secondary-color">Individual Contributer</span>
+                        </div>
+                     </div>
+                </li>
+                <li id="bobjones">
+                     <span class="avatar" style="background-image: url('images/dvt/12.png')"></span>
+                     <div class="container">
+                         <div>
+                             <span class="name">Bob Jones</span>
+                         </div>
+                         <div>
+                             <span class="oj-text-xs oj-text-secondary-color">Salesman</span>
+                         </div>
+                     </div>
+        </oj-list-view >
+            
+        </div>
+  
+           <div id="componentDemoContent" style="width: 1px; min-width: 50%; margin-top: 25px;">
+                <div id="div1">
+
+                    <oj-label for="dateTime"></oj-label>
+                    <oj-input-date-time id="dateTime" value='{{value}}'>
+                    </oj-input-date-time>
+
+                    <br/><br/>
+
+                    <span class="oj-label">Current component value is:</span>
+                    <span data-bind="text: value"></span>
+
+                </div>
+
+        
+  </div>
+          
+           <div id="componentDemoContent" style="width: 1px; min-width: 100%;  background-color: #E5F6EA; margin-top: 30px; ">  
+                <oj-table id='table' aria-label='Departments Table'
+                                                data='[[dataprovider]]' 
+                                                columns-default.sortable='disabled' 
+                                                columns='[{"headerText": "Department Id", 
+                                                           "field": "DepartmentId",
+                                                           "headerClassName": "oj-sm-only-hide",
+                                                           "className": "oj-sm-only-hide"},
+                                                          {"headerText": "Department Name", 
+                                                           "field": "DepartmentName"},
+                                                          {"headerText": "Location Id", 
+                                                           "field": "LocationId",
+                                                           "headerClassName": "oj-sm-only-hide",
+                                                           "className": "oj-sm-only-hide"},
+                                                          {"headerText": "Manager Id", 
+                                                           "field": "ManagerId"}]'
+                                                style='width: 100%; height:100%;'>
+                </oj-table>
+
+        
+      </div>
+          
+           <div id="slidersDemoContent" style="width: 1px; min-width: 100%; margin-top: 25px;">
+           
+                <div id="slider-container">
+                      <oj-label for="slider"> price filter </oj-label>
+                      <oj-slider id="slider" value="{{valuee}}" min="[[min]]" max="[[max]]" step="[[step]]"> </oj-slider>
+                    <br>
+                    <span> Value: </span>
+                    <span id="value" data-bind="text: valuee"></span>
+
+                  </div>  
+         </div>
+          
+          <div id="tabbarcontainer" style="margin-top: 20px; margin-bottom: 20px;">
+            <oj-tab-bar 
+              edge="[[edge]]" 
+              selection="{{selectedItem}}">
+              <ul>
+                <li id="home">
+                  <a href="#">
+                    <span class="oj-tabbar-item-icon
+                          demo-home-icon-24 demo-icon-font-24">
+                    </span>
+                    Home
+                  </a>
+                </li>
+                <li id="gettingstarted">
+                  <a href="#">
+                    <span class="oj-tabbar-item-icon
+                          demo-education-icon-24 demo-icon-font-24">
+                    </span>
+                    Getting Started
+                  </a>
+                </li>
+                <li id="cookbook" class="oj-enabled">
+                  <a href="#">
+                    <span class="oj-tabbar-item-icon
+                          demo-catalog-icon-24 demo-icon-font-24">
+                    </span>
+                    Cookbook
+                  </a>
+                </li>
+                <li id="stylelab" >
+                  <a href="#" >
+                    <span class="oj-tabbar-item-icon
+                          demo-palette-icon-24 demo-icon-font-24">
+                    </span>
+                    Style Lab
+                  </a>
+                </li>
+              </ul>
+            </oj-tab-bar>
+              <br>
+          </div>
+          
+          <div>
+            <p class="bold">Last selected list item:
+              <span id="results" data-bind='text: selectedItem'></span>
+            </p>
+          </div>
+          
+          
+          
+            
+      </div>
+      
+  </div>
+ 
+ 
+  
+ 
+   
+</div>
